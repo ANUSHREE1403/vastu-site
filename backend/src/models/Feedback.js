@@ -27,7 +27,7 @@ const feedbackSchema = new mongoose.Schema({
   },
   isPublished: {
     type: Boolean,
-    default: false
+    default: true
   },
   isVerified: {
     type: Boolean,
