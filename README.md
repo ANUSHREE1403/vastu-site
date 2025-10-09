@@ -89,3 +89,11 @@ The application is designed to be production-ready with:
 - Security best practices
 - Performance optimization
 - Scalable architecture
+
+---
+
+## 👩‍💻 Developer
+
+**Complete website developed by Anushree**
+
+© 2025 Vastu Shakti Platform. All rights reserved.
