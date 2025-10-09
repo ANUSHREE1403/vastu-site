@@ -43,11 +43,10 @@ const auth = async (req, res, next) => {
 router.post('/book', [
   body('name').trim().isLength({ min: 2 }).withMessage('Name must be at least 2 characters'),
   body('email').isEmail().normalizeEmail().withMessage('Please provide a valid email'),
-  // Accept Indian numbers with or without +91, spaces or dashes
-  body('mobile').matches(/^\+?91[-\s]?\d{5}[-\s]?\d{5}$|^\d{10}$/).withMessage('Please provide a valid mobile number'),
-  body('state').trim().notEmpty().withMessage('State is required'),
-  body('occupation').trim().notEmpty().withMessage('Occupation is required'),
-  body('preferredDate').isISO8601().withMessage('Please provide a valid date'),
+  body('mobile').trim().isLength({ min: 10 }).withMessage('Please provide a valid mobile number'),
+  body('state').optional().trim(),
+  body('occupation').optional().trim(),
+  body('preferredDate').notEmpty().withMessage('Please provide a preferred date'),
   body('preferredTime').trim().notEmpty().withMessage('Preferred time is required'),
   body('consultationType').isIn(['house', 'office', 'career', 'wealth', 'health', 'marriage', 'education', 'relationship']).withMessage('Invalid consultation type'),
   validateRequest
