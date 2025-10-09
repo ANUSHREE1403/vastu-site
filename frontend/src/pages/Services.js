@@ -24,7 +24,7 @@ const Services = () => {
         ? 'वास्तु शास्त्र के बारे में अपने सभी संदेह और प्रश्न पूछें। हमारे विशेषज्ञ आपको विस्तृत उत्तर देंगे।'
         : 'Ask all your doubts and questions about Vastu Shastra. Our experts will provide detailed answers.',
       icon: FiMessageCircle,
-      color: 'text-blue-600 dark:text-blue-400'
+      color: 'text-blue-500 dark:text-blue-300'
     },
     {
       step: 3,
@@ -33,7 +33,7 @@ const Services = () => {
         ? 'अपनी समस्याओं के लिए व्यक्तिगत वास्तु समाधान और उपचार प्राप्त करें जो आपके जीवन में सकारात्मक बदलाव लाएंगे।'
         : 'Receive personalized Vastu solutions and remedies for your problems that will bring positive changes to your life.',
       icon: FiHeart,
-      color: 'text-orange-600 dark:text-orange-400'
+      color: 'text-orange-500 dark:text-orange-300'
     }
   ];
 
@@ -180,7 +180,7 @@ const Services = () => {
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-800 mb-6`}>
                   <step.icon className={`w-8 h-8 ${step.color}`} />
                 </div>
-                <div className="text-2xl font-bold text-orange-600 dark:text-orange-400 mb-2">
+                <div className="text-2xl font-bold text-orange-500 dark:text-orange-300 mb-2">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
@@ -233,7 +233,7 @@ const Services = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600 dark:text-gray-400">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
                       {feature}
                     </li>
                   ))}

@@ -50,13 +50,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-3">
             <Logo size="default" />
-            <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-gray-900 dark:text-white">
+            <div className="hidden sm:flex sm:flex-col sm:justify-center">
+              <h1 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">
                 Vastu Shakti
               </h1>
-              <p className="text-xs text-orange-600 dark:text-orange-400 font-medium">
+              <p className="text-xs text-orange-500 dark:text-orange-300 font-medium leading-tight">
                 {language === 'en' ? 'Transform Your Life' : 'अपना जीवन बदलें'}
               </p>
             </div>
@@ -68,7 +68,7 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors duration-200 flex items-center space-x-1"
+                className="text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-300 transition-colors duration-200 flex items-center space-x-1"
               >
                 <item.icon className="w-4 h-4" />
                 <span>{item.label}</span>
@@ -81,7 +81,7 @@ const Navbar = () => {
             {/* Phone Number - Desktop Only */}
             <a
               href="tel:+918448750725"
-              className="hidden lg:flex items-center space-x-2 px-3 py-2 bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded-lg hover:bg-orange-100 dark:hover:bg-orange-900/30 transition-colors duration-200"
+              className="hidden lg:flex items-center space-x-2 px-3 py-2 bg-orange-50 dark:bg-orange-900/20 text-orange-500 dark:text-orange-300 rounded-lg hover:bg-orange-100 dark:hover:bg-orange-900/30 transition-colors duration-200"
             >
               <FiPhone className="w-4 h-4" />
               <span className="text-sm font-medium">+91 84487 50725</span>
@@ -164,7 +164,7 @@ const Navbar = () => {
             {/* Book Consultation Button */}
             <Link
               to="/book-consultation"
-              className="hidden lg:block bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="hidden lg:block bg-gradient-to-r from-orange-400 to-red-400 text-white px-6 py-2 rounded-lg font-semibold hover:from-orange-500 hover:to-red-500 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               {t('common.bookConsultation')}
             </Link>
@@ -186,7 +186,7 @@ const Navbar = () => {
               {/* Phone Number - Mobile */}
               <a
                 href="tel:+918448750725"
-                className="flex items-center space-x-2 px-4 py-3 bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded-lg mx-4 mb-2"
+                className="flex items-center space-x-2 px-4 py-3 bg-orange-50 dark:bg-orange-900/20 text-orange-500 dark:text-orange-300 rounded-lg mx-4 mb-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <FiPhone className="w-5 h-5" />
@@ -231,7 +231,7 @@ const Navbar = () => {
               
               <Link
                 to="/book-consultation"
-                className="flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+                className="flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <span>{t('common.bookConsultation')}</span>

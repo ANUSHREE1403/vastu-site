@@ -55,7 +55,7 @@ const Footer = () => {
                 href="https://facebook.com/vastushakti"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors duration-200"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors duration-200"
               >
                 <FiFacebook className="w-5 h-5" />
               </a>
@@ -71,7 +71,7 @@ const Footer = () => {
                 href="https://youtube.com/@VastuShakti-y71"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors duration-200"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-500 transition-colors duration-200"
               >
                 <FiYoutube className="w-5 h-5" />
               </a>
@@ -140,7 +140,7 @@ const Footer = () => {
             <div className="mt-6">
               <Link
                 to="/book-consultation"
-                className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center bg-gradient-to-r from-orange-400 to-red-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-500 hover:to-red-500 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 {t('common.bookConsultation')}
                 <FiArrowRight className="ml-2" />

@@ -85,7 +85,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-full mb-4">
-                <FiPhone className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                <FiPhone className="w-6 h-6 text-orange-500 dark:text-orange-300" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 {isHindi ? 'फोन' : 'Phone'}
@@ -95,7 +95,7 @@ const Contact = () => {
             
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-full mb-4">
-                <FiMail className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                <FiMail className="w-6 h-6 text-orange-500 dark:text-orange-300" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 {isHindi ? 'ईमेल' : 'Email'}
@@ -105,7 +105,7 @@ const Contact = () => {
             
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-full mb-4">
-                <FiMapPin className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                <FiMapPin className="w-6 h-6 text-orange-500 dark:text-orange-300" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 {isHindi ? 'स्थान' : 'Location'}
@@ -146,7 +146,7 @@ const Contact = () => {
                   required
                   value={enquiryForm.name}
                   onChange={(e) => setEnquiryForm({...enquiryForm, name: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder={isHindi ? 'आपका नाम' : 'Your name'}
                 />
               </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                   required
                   value={enquiryForm.email}
                   onChange={(e) => setEnquiryForm({...enquiryForm, email: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder={isHindi ? 'आपका ईमेल' : 'Your email'}
                 />
               </div>
@@ -174,7 +174,7 @@ const Contact = () => {
                   required
                   value={enquiryForm.subject}
                   onChange={(e) => setEnquiryForm({...enquiryForm, subject: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder={isHindi ? 'विषय' : 'Subject'}
                 />
               </div>
@@ -188,7 +188,7 @@ const Contact = () => {
                   rows={4}
                   value={enquiryForm.message}
                   onChange={(e) => setEnquiryForm({...enquiryForm, message: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder={isHindi ? 'अपना संदेश यहाँ लिखें...' : 'Write your message here...'}
                 />
               </div>
@@ -196,7 +196,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmittingEnquiry}
-                className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {isSubmittingEnquiry ? (
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
@@ -238,7 +238,7 @@ const Contact = () => {
                   required
                   value={feedbackForm.name}
                   onChange={(e) => setFeedbackForm({...feedbackForm, name: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder={isHindi ? 'आपका नाम' : 'Your name'}
                 />
               </div>
@@ -252,7 +252,7 @@ const Contact = () => {
                   required
                   value={feedbackForm.email}
                   onChange={(e) => setFeedbackForm({...feedbackForm, email: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder={isHindi ? 'आपका ईमेल' : 'Your email'}
                 />
               </div>
@@ -293,7 +293,7 @@ const Contact = () => {
                   rows={4}
                   value={feedbackForm.comments}
                   onChange={(e) => setFeedbackForm({...feedbackForm, comments: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder={isHindi ? 'अपनी टिप्पणियाँ यहाँ लिखें...' : 'Write your comments here...'}
                 />
               </div>
@@ -301,7 +301,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmittingFeedback}
-                className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {isSubmittingFeedback ? (
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>

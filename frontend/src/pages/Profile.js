@@ -142,7 +142,7 @@ const Profile = () => {
             {!isEditing ? (
               <button
                 onClick={() => setIsEditing(true)}
-                className="flex items-center space-x-2 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-colors duration-200"
+                className="flex items-center space-x-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors duration-200"
               >
                 <FiEdit2 className="w-4 h-4" />
                 <span>{isHindi ? 'संपादित करें' : 'Edit Profile'}</span>
@@ -176,7 +176,7 @@ const Profile = () => {
             {/* Basic Information */}
             <div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                <FiUser className="w-5 h-5 mr-2 text-orange-600" />
+                <FiUser className="w-5 h-5 mr-2 text-orange-500" />
                 {isHindi ? 'बुनियादी जानकारी' : 'Basic Information'}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -191,7 +191,7 @@ const Profile = () => {
                     value={profileData.name}
                     onChange={handleInputChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
                   />
                 </div>
 
@@ -226,7 +226,7 @@ const Profile = () => {
                     value={profileData.mobile}
                     onChange={handleInputChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
                   />
                 </div>
 
@@ -242,7 +242,7 @@ const Profile = () => {
                     onChange={handleInputChange}
                     disabled={!isEditing}
                     placeholder={isHindi ? 'आपका व्यवसाय' : 'Your occupation'}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
                   />
                 </div>
               </div>
@@ -251,7 +251,7 @@ const Profile = () => {
             {/* Birth Details */}
             <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                <FiCalendar className="w-5 h-5 mr-2 text-orange-600" />
+                <FiCalendar className="w-5 h-5 mr-2 text-orange-500" />
                 {isHindi ? 'जन्म विवरण' : 'Birth Details'}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -266,7 +266,7 @@ const Profile = () => {
                     value={profileData.dateOfBirth}
                     onChange={handleInputChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
                   />
                 </div>
 
@@ -282,7 +282,7 @@ const Profile = () => {
                     value={profileData.timeOfBirth}
                     onChange={handleInputChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
                   />
                 </div>
 
@@ -296,7 +296,7 @@ const Profile = () => {
                     value={profileData.gender}
                     onChange={handleInputChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
                   >
                     {genderOptions.map(option => (
                       <option key={option.value} value={option.value}>
@@ -311,7 +311,7 @@ const Profile = () => {
             {/* Address Information */}
             <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                <FiMapPin className="w-5 h-5 mr-2 text-orange-600" />
+                <FiMapPin className="w-5 h-5 mr-2 text-orange-500" />
                 {isHindi ? 'पता जानकारी' : 'Address Information'}
               </h3>
               <div className="space-y-4">
@@ -327,7 +327,7 @@ const Profile = () => {
                     disabled={!isEditing}
                     rows={2}
                     placeholder={isHindi ? 'घर का पता' : 'Street address'}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
                   />
                 </div>
 
@@ -344,7 +344,7 @@ const Profile = () => {
                       onChange={handleInputChange}
                       disabled={!isEditing}
                       placeholder={isHindi ? 'शहर' : 'City'}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
                     />
                   </div>
 
@@ -360,7 +360,7 @@ const Profile = () => {
                       onChange={handleInputChange}
                       disabled={!isEditing}
                       placeholder={isHindi ? 'राज्य' : 'State'}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
                     />
                   </div>
 
@@ -377,7 +377,7 @@ const Profile = () => {
                       disabled={!isEditing}
                       placeholder={isHindi ? 'पिन कोड' : 'Pincode'}
                       maxLength={6}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
                     />
                   </div>
                 </div>
@@ -388,7 +388,7 @@ const Profile = () => {
 
         {/* Info Card */}
         <motion.div 
-          className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg"
+          className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-700 rounded-lg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}

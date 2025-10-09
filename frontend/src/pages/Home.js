@@ -178,8 +178,8 @@ const Home = () => {
       {/* Hero Section */}
       <section className="gradient-bg text-white py-20 relative overflow-hidden min-h-[500px]">
         {/* 3D Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 opacity-90"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-transparent to-red-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-red-400 to-orange-500 opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-300/20 via-transparent to-red-500/20"></div>
         
         {/* Animated Background Particles */}
         <div className="absolute inset-0">
@@ -567,7 +567,7 @@ const Home = () => {
           >
             <button
               onClick={() => setIsReviewModalOpen(true)}
-              className="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center mx-auto"
+              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center mx-auto"
             >
               <FiMessageCircle className="w-6 h-6 mr-2" />
               {isHindi ? 'समीक्षा लिखें या पढ़ें' : 'Write or Read Reviews'}
@@ -596,7 +596,7 @@ const Home = () => {
           </p>
           <Link
             to="/book-consultation"
-            className="inline-flex items-center bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl"
           >
             {t('common.bookConsultation')}
             <FiArrowRight className="ml-2" />

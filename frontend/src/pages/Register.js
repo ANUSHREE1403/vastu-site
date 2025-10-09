@@ -140,7 +140,7 @@ const Register = () => {
           <div className="mt-6 text-center">
             <p className="text-gray-600 dark:text-gray-400">
               {isHindi ? 'पहले से खाता है?' : 'Already have an account?'}{' '}
-              <a href="/login" className="text-orange-600 hover:text-orange-700">
+              <a href="/login" className="text-orange-500 hover:text-orange-600">
                 {isHindi ? 'लॉगिन करें' : 'Login'}
               </a>
             </p>

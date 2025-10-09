@@ -10,7 +10,7 @@ const Logo = ({ size = 'default', className = '' }) => {
   return (
     <div className={`${sizeClasses[size]} ${className} relative`}>
       {/* Main Logo Container */}
-      <div className="w-full h-full bg-gradient-to-br from-orange-500 via-red-500 to-yellow-500 rounded-lg flex items-center justify-center shadow-lg">
+      <div className="w-full h-full bg-gradient-to-br from-orange-400 via-red-400 to-yellow-400 rounded-lg flex items-center justify-center shadow-lg">
         {/* Inner Circle */}
         <div className="w-3/4 h-3/4 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
           {/* Vastu Symbol - Simplified Mandala */}

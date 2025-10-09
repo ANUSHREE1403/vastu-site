@@ -201,7 +201,7 @@ const ReviewModal = ({ isOpen, onClose }) => {
                 onClick={() => setActiveTab('write')}
                 className={`flex-1 py-4 px-6 text-center font-semibold transition-colors ${
                   activeTab === 'write'
-                    ? 'text-orange-600 dark:text-orange-400 border-b-2 border-orange-600 dark:border-orange-400'
+                    ? 'text-orange-500 dark:text-orange-300 border-b-2 border-orange-500 dark:border-orange-300'
                     : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
                 }`}
               >
@@ -211,7 +211,7 @@ const ReviewModal = ({ isOpen, onClose }) => {
                 onClick={() => setActiveTab('read')}
                 className={`flex-1 py-4 px-6 text-center font-semibold transition-colors ${
                   activeTab === 'read'
-                    ? 'text-orange-600 dark:text-orange-400 border-b-2 border-orange-600 dark:border-orange-400'
+                    ? 'text-orange-500 dark:text-orange-300 border-b-2 border-orange-500 dark:border-orange-300'
                     : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
                 }`}
               >
@@ -233,7 +233,7 @@ const ReviewModal = ({ isOpen, onClose }) => {
                         required
                         value={reviewForm.name}
                         onChange={(e) => setReviewForm({...reviewForm, name: e.target.value})}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                         placeholder={isHindi ? 'आपका नाम' : 'Your name'}
                       />
                     </div>
@@ -247,7 +247,7 @@ const ReviewModal = ({ isOpen, onClose }) => {
                         required
                         value={reviewForm.email}
                         onChange={(e) => setReviewForm({...reviewForm, email: e.target.value})}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                         placeholder={isHindi ? 'आपका ईमेल' : 'Your email'}
                       />
                     </div>
@@ -316,7 +316,7 @@ const ReviewModal = ({ isOpen, onClose }) => {
                   <button
                     type="submit"
                     disabled={isSubmittingReview}
-                    className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
                     {isSubmittingReview ? (
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
@@ -363,7 +363,7 @@ const ReviewModal = ({ isOpen, onClose }) => {
                         <div className="flex items-start justify-between mb-3">
                           <div className="flex items-center">
                             <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mr-3">
-                              <FiUser className="w-5 h-5 text-orange-600 dark:text-orange-400" />
+                              <FiUser className="w-5 h-5 text-orange-500 dark:text-orange-300" />
                             </div>
                             <div>
                               <h4 className="font-semibold text-gray-900 dark:text-white">

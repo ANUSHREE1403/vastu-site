@@ -138,7 +138,7 @@ const ChatBot = () => {
       <div className="fixed bottom-6 right-6 z-50">
         <button
           onClick={() => setIsOpen(true)}
-          className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center hover:scale-110"
+          className="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-400 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center hover:scale-110"
         >
           <FiMessageCircle className="w-7 h-7" />
         </button>
@@ -152,7 +152,7 @@ const ChatBot = () => {
     }`}>
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 flex flex-col h-full">
         {/* Header */}
-        <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white p-4 rounded-t-lg flex items-center justify-between">
+        <div className="bg-gradient-to-r from-orange-400 to-red-400 text-white p-4 rounded-t-lg flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
               <span className="text-sm font-bold">VS</span>
@@ -193,7 +193,7 @@ const ChatBot = () => {
                     className={`max-w-xs px-4 py-2 rounded-lg ${
                       message.isBot
                         ? 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100'
-                        : 'bg-blue-600 text-white'
+                        : 'bg-blue-500 text-white'
                     }`}
                   >
                     <p className="text-sm">{message.message}</p>
@@ -248,13 +248,13 @@ const ChatBot = () => {
                   onChange={(e) => setInputMessage(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder={t('chat.placeholder')}
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 text-sm"
+                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 text-sm"
                   disabled={isLoading}
                 />
                 <button
                   onClick={sendMessage}
                   disabled={!inputMessage.trim() || isLoading}
-                  className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+                  className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
                 >
                   <FiSend className="w-4 h-4" />
                 </button>
