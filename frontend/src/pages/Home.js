@@ -176,7 +176,7 @@ const Home = () => {
         }
       `}</style>
       {/* Hero Section */}
-      <section className="gradient-bg text-white py-20 relative overflow-hidden">
+      <section className="gradient-bg text-white py-20 relative overflow-hidden min-h-[500px]">
         {/* 3D Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 opacity-90"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-transparent to-red-600/20"></div>
@@ -191,90 +191,92 @@ const Home = () => {
           <div className="absolute top-2/3 right-1/6 w-3 h-3 bg-red-300 rounded-full opacity-70 animate-bounce" style={{animationDuration: '3.8s', animationDelay: '2.5s'}}></div>
         </div>
 
-        {/* Left Side Symbol - Visible, non-interfering */}
-        <div className="absolute left-0 top-1/2 opacity-95 z-10 pointer-events-none"
-             style={{
-               height: '88%',
-               aspectRatio: '1 / 1',
-               transform: 'translate(-6%, -50%) perspective(1000px) rotateY(-8deg)',
-               borderRadius: '50%',
-               overflow: 'hidden',
-               background: 'transparent',
-               WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
-               maskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
-               boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
-             }}>
-          <img
-            src="/Gemini_Generated_Image_qidalwqidalwqida.png"
-            alt="Vastu Symbol"
-            className="w-full h-full object-cover"
-            style={{
-              filter: 'brightness(1.08) contrast(1.04) drop-shadow(0 0 22px rgba(255,165,0,0.28))',
-              backgroundColor: 'transparent',
-              objectPosition: 'center',
-              WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
-              maskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
-              transform: 'scale(1.14)',
-              zIndex: 1,
-              position: 'relative'
-            }}
-          />
-          <div className="circleGlow circleGlow--inner" style={{ zIndex: 2 }} />
-          <div className="circleGlow circleGlow--outer" style={{ zIndex: 1 }} />
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              borderRadius: '50%',
-              boxShadow:
-                'inset 0 10px 18px rgba(0,0,0,0.12), inset 0 -10px 18px rgba(0,0,0,0.08)',
-              zIndex: 3,
-              pointerEvents: 'none'
-            }}
-          />
+        {/* Left Side Symbol Container - Fixed positioning */}
+        <div className="absolute left-0 top-0 bottom-0 w-[300px] md:w-[400px] flex items-center justify-start z-10 pointer-events-none">
+          <div className="relative w-full aspect-square max-h-[400px] md:max-h-[500px] opacity-95"
+               style={{
+                 marginLeft: '-20%',
+                 transform: 'perspective(1000px) rotateY(-8deg)',
+                 borderRadius: '50%',
+                 overflow: 'hidden',
+                 background: 'transparent',
+                 WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
+                 maskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
+                 boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
+               }}>
+            <img
+              src="/Gemini_Generated_Image_qidalwqidalwqida.png"
+              alt="Vastu Symbol"
+              className="w-full h-full object-cover"
+              style={{
+                filter: 'brightness(1.08) contrast(1.04) drop-shadow(0 0 22px rgba(255,165,0,0.28))',
+                backgroundColor: 'transparent',
+                objectPosition: 'center',
+                WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
+                maskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
+                transform: 'scale(1.14)',
+                zIndex: 1,
+                position: 'relative'
+              }}
+            />
+            <div className="circleGlow circleGlow--inner" style={{ zIndex: 2 }} />
+            <div className="circleGlow circleGlow--outer" style={{ zIndex: 1 }} />
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                borderRadius: '50%',
+                boxShadow:
+                  'inset 0 10px 18px rgba(0,0,0,0.12), inset 0 -10px 18px rgba(0,0,0,0.08)',
+                zIndex: 3,
+                pointerEvents: 'none'
+              }}
+            />
+          </div>
         </div>
 
-        {/* Right Side Symbol (New WhatsApp Image) - Visible, non-interfering */}
-        <div className="absolute right-0 top-1/2 opacity-95 z-10 pointer-events-none"
-             style={{
-               height: '88%',
-               aspectRatio: '1 / 1',
-               transform: 'translate(6%, -50%) perspective(1000px) rotateY(8deg)',
-               borderRadius: '50%',
-               overflow: 'hidden',
-               background: 'transparent',
-               WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
-               maskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
-               boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
-             }}>
-          <img
-            src="/vastu-symbol-right.jpg"
-            alt="Vastu Symbol"
-            className="w-full h-full object-cover"
-            style={{
-              filter: 'brightness(1.08) contrast(1.04) drop-shadow(0 0 22px rgba(255,140,0,0.28))',
-              backgroundColor: 'transparent',
-              objectPosition: 'center',
-              WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
-              maskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
-              transform: 'scale(1.14)',
-              zIndex: 1,
-              position: 'relative'
-            }}
-          />
-          <div className="circleGlow circleGlow--inner" style={{ zIndex: 2 }} />
-          <div className="circleGlow circleGlow--outer" style={{ zIndex: 1 }} />
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              borderRadius: '50%',
-              boxShadow:
-                'inset 0 10px 18px rgba(0,0,0,0.12), inset 0 -10px 18px rgba(0,0,0,0.08)',
-              zIndex: 3,
-              pointerEvents: 'none'
-            }}
-          />
+        {/* Right Side Symbol Container - Fixed positioning */}
+        <div className="absolute right-0 top-0 bottom-0 w-[300px] md:w-[400px] flex items-center justify-end z-10 pointer-events-none">
+          <div className="relative w-full aspect-square max-h-[400px] md:max-h-[500px] opacity-95"
+               style={{
+                 marginRight: '-20%',
+                 transform: 'perspective(1000px) rotateY(8deg)',
+                 borderRadius: '50%',
+                 overflow: 'hidden',
+                 background: 'transparent',
+                 WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
+                 maskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
+                 boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
+               }}>
+            <img
+              src="/vastu-symbol-right.jpg"
+              alt="Vastu Symbol"
+              className="w-full h-full object-cover"
+              style={{
+                filter: 'brightness(1.08) contrast(1.04) drop-shadow(0 0 22px rgba(255,140,0,0.28))',
+                backgroundColor: 'transparent',
+                objectPosition: 'center',
+                WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
+                maskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
+                transform: 'scale(1.14)',
+                zIndex: 1,
+                position: 'relative'
+              }}
+            />
+            <div className="circleGlow circleGlow--inner" style={{ zIndex: 2 }} />
+            <div className="circleGlow circleGlow--outer" style={{ zIndex: 1 }} />
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                borderRadius: '50%',
+                boxShadow:
+                  'inset 0 10px 18px rgba(0,0,0,0.12), inset 0 -10px 18px rgba(0,0,0,0.08)',
+                zIndex: 3,
+                pointerEvents: 'none'
+              }}
+            />
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
@@ -388,91 +390,93 @@ const Home = () => {
       </section>
 
       {/* Quote Section */}
-      <section className="py-32 gradient-bg text-white relative overflow-hidden">
-        {/* Left Side Symbol (Swastika) */}
-        <div className="absolute left-0 top-1/2 opacity-95 z-10 pointer-events-none"
-             style={{
-               height: '88%',
-               aspectRatio: '1 / 1',
-               transform: 'translate(-6%, -50%) perspective(1000px) rotateY(-8deg)',
-               borderRadius: '50%',
-               overflow: 'hidden',
-               background: 'transparent',
-               WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
-               maskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
-               boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
-             }}>
-          <img
-            src="/Gemini_Generated_Image_rp4nrrrp4nrrrp4n.png"
-            alt="Vastu Symbol"
-            className="w-full h-full object-cover"
-            style={{
-              filter: 'brightness(1.08) contrast(1.04) drop-shadow(0 0 22px rgba(255,165,0,0.28))',
-              backgroundColor: 'transparent',
-              objectPosition: 'center',
-              WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
-              maskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
-              transform: 'scale(1.14)',
-              zIndex: 1,
-              position: 'relative'
-            }}
-          />
-          <div className="circleGlow circleGlow--inner" style={{ zIndex: 2 }} />
-          <div className="circleGlow circleGlow--outer" style={{ zIndex: 1 }} />
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              borderRadius: '50%',
-              boxShadow:
-                'inset 0 10px 18px rgba(0,0,0,0.12), inset 0 -10px 18px rgba(0,0,0,0.08)',
-              zIndex: 3,
-              pointerEvents: 'none'
-            }}
-          />
+      <section className="py-32 gradient-bg text-white relative overflow-hidden min-h-[500px]">
+        {/* Left Side Symbol Container - Fixed positioning */}
+        <div className="absolute left-0 top-0 bottom-0 w-[300px] md:w-[400px] flex items-center justify-start z-10 pointer-events-none">
+          <div className="relative w-full aspect-square max-h-[400px] md:max-h-[500px] opacity-95"
+               style={{
+                 marginLeft: '-20%',
+                 transform: 'perspective(1000px) rotateY(-8deg)',
+                 borderRadius: '50%',
+                 overflow: 'hidden',
+                 background: 'transparent',
+                 WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
+                 maskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
+                 boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
+               }}>
+            <img
+              src="/Gemini_Generated_Image_rp4nrrrp4nrrrp4n.png"
+              alt="Vastu Symbol"
+              className="w-full h-full object-cover"
+              style={{
+                filter: 'brightness(1.08) contrast(1.04) drop-shadow(0 0 22px rgba(255,165,0,0.28))',
+                backgroundColor: 'transparent',
+                objectPosition: 'center',
+                WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
+                maskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
+                transform: 'scale(1.14)',
+                zIndex: 1,
+                position: 'relative'
+              }}
+            />
+            <div className="circleGlow circleGlow--inner" style={{ zIndex: 2 }} />
+            <div className="circleGlow circleGlow--outer" style={{ zIndex: 1 }} />
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                borderRadius: '50%',
+                boxShadow:
+                  'inset 0 10px 18px rgba(0,0,0,0.12), inset 0 -10px 18px rgba(0,0,0,0.08)',
+                zIndex: 3,
+                pointerEvents: 'none'
+              }}
+            />
+          </div>
         </div>
 
-        {/* Right Side Symbol (Swastika) */}
-        <div className="absolute right-0 top-1/2 opacity-95 z-10 pointer-events-none"
-             style={{
-               height: '88%',
-               aspectRatio: '1 / 1',
-               transform: 'translate(6%, -50%) perspective(1000px) rotateY(8deg)',
-               borderRadius: '50%',
-               overflow: 'hidden',
-               background: 'transparent',
-               WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
-               maskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
-               boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
-             }}>
-          <img
-            src="/Gemini_Generated_Image_rp4nrrrp4nrrrp4n.png"
-            alt="Vastu Symbol"
-            className="w-full h-full object-cover"
-            style={{
-              filter: 'brightness(1.08) contrast(1.04) drop-shadow(0 0 22px rgba(255,140,0,0.28))',
-              backgroundColor: 'transparent',
-              objectPosition: 'center',
-              WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
-              maskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
-              transform: 'scale(1.14)',
-              zIndex: 1,
-              position: 'relative'
-            }}
-          />
-          <div className="circleGlow circleGlow--inner" style={{ zIndex: 2 }} />
-          <div className="circleGlow circleGlow--outer" style={{ zIndex: 1 }} />
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              borderRadius: '50%',
-              boxShadow:
-                'inset 0 10px 18px rgba(0,0,0,0.12), inset 0 -10px 18px rgba(0,0,0,0.08)',
-              zIndex: 3,
-              pointerEvents: 'none'
-            }}
-          />
+        {/* Right Side Symbol Container - Fixed positioning */}
+        <div className="absolute right-0 top-0 bottom-0 w-[300px] md:w-[400px] flex items-center justify-end z-10 pointer-events-none">
+          <div className="relative w-full aspect-square max-h-[400px] md:max-h-[500px] opacity-95"
+               style={{
+                 marginRight: '-20%',
+                 transform: 'perspective(1000px) rotateY(8deg)',
+                 borderRadius: '50%',
+                 overflow: 'hidden',
+                 background: 'transparent',
+                 WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
+                 maskImage: 'radial-gradient(circle at 50% 50%, black 92%, transparent 100%)',
+                 boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
+               }}>
+            <img
+              src="/Gemini_Generated_Image_rp4nrrrp4nrrrp4n.png"
+              alt="Vastu Symbol"
+              className="w-full h-full object-cover"
+              style={{
+                filter: 'brightness(1.08) contrast(1.04) drop-shadow(0 0 22px rgba(255,140,0,0.28))',
+                backgroundColor: 'transparent',
+                objectPosition: 'center',
+                WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
+                maskImage: 'radial-gradient(circle at 50% 50%, black 75%, transparent 77%)',
+                transform: 'scale(1.14)',
+                zIndex: 1,
+                position: 'relative'
+              }}
+            />
+            <div className="circleGlow circleGlow--inner" style={{ zIndex: 2 }} />
+            <div className="circleGlow circleGlow--outer" style={{ zIndex: 1 }} />
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                borderRadius: '50%',
+                boxShadow:
+                  'inset 0 10px 18px rgba(0,0,0,0.12), inset 0 -10px 18px rgba(0,0,0,0.08)',
+                zIndex: 3,
+                pointerEvents: 'none'
+              }}
+            />
+          </div>
         </div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">

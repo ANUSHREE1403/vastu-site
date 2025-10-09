@@ -81,7 +81,6 @@ out/
 
 # Gatsby files
 .cache/
-public
 
 # misc
 .turbo
