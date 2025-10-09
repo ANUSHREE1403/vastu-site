@@ -12,7 +12,7 @@ const ChatBot = () => {
   const messagesEndRef = useRef(null);
   const sessionId = useRef(Date.now().toString());
   // API base (frontend/.env -> REACT_APP_API_URL). Fallback to localhost for dev.
-  const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+  const API_BASE = process.env.REACT_APP_API_URL || 'https://vastu-shakti-backend.onrender.com';
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
