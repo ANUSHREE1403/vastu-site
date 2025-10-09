@@ -41,15 +41,15 @@ const auth = async (req, res, next) => {
 // @desc    Book a consultation
 // @access  Public
 router.post('/book', [
-  body('name').trim().isLength({ min: 2 }).withMessage('Name must be at least 2 characters'),
-  body('email').isEmail().normalizeEmail().withMessage('Please provide a valid email'),
-  body('mobile').trim().isLength({ min: 10 }).withMessage('Please provide a valid mobile number'),
+  body('name').optional().trim(),
+  body('email').optional().trim(),
+  body('mobile').optional().trim(),
   body('state').optional().trim(),
   body('occupation').optional().trim(),
-  body('preferredDate').notEmpty().withMessage('Please provide a preferred date'),
-  body('preferredTime').trim().notEmpty().withMessage('Preferred time is required'),
-  body('consultationType').isIn(['house', 'office', 'career', 'wealth', 'health', 'marriage', 'education', 'relationship']).withMessage('Invalid consultation type'),
-  validateRequest
+  body('preferredDate').optional().trim(),
+  body('preferredTime').optional().trim(),
+  body('consultationType').optional().trim(),
+  body('message').optional().trim()
 ], async (req, res) => {
   try {
     const {

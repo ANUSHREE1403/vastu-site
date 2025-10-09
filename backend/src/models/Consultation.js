@@ -8,34 +8,40 @@ const consultationSchema = new mongoose.Schema({
   },
   name: {
     type: String,
-    required: true,
-    trim: true
+    required: false,
+    trim: true,
+    default: ''
   },
   email: {
     type: String,
-    required: true,
+    required: false,
     lowercase: true,
-    trim: true
+    trim: true,
+    default: ''
   },
   mobile: {
     type: String,
-    required: true
+    required: false,
+    default: ''
   },
   state: {
     type: String,
-    required: true
+    required: false,
+    default: ''
   },
   occupation: {
     type: String,
-    required: true
+    required: false,
+    default: ''
   },
   preferredDate: {
     type: Date,
-    required: true
+    required: false
   },
   preferredTime: {
     type: String,
-    required: true
+    required: false,
+    default: ''
   },
   message: {
     type: String,
@@ -49,7 +55,8 @@ const consultationSchema = new mongoose.Schema({
   consultationType: {
     type: String,
     enum: ['house', 'office', 'career', 'wealth', 'health', 'marriage', 'education', 'relationship'],
-    required: true
+    required: false,
+    default: 'house'
   },
   assignedExpert: {
     type: mongoose.Schema.Types.ObjectId,
