@@ -3,29 +3,11 @@ const { body } = require('express-validator');
 const jwt = require('jsonwebtoken');
 const config = require('../../config/config');
 const validateRequest = require('../middleware/validateRequest');
+const Consultation = require('../models/Consultation');
+const User = require('../models/User');
+const { sendConsultationNotification } = require('../utils/emailService');
 
 const router = express.Router();
-
-// Mock consultations storage
-let mockConsultations = [];
-
-// Mock users storage
-let mockUsers = [
-  {
-    id: '1',
-    name: 'Test User',
-    email: 'test@example.com',
-    mobile: '9876543210',
-    password: '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj4J/8.5.5.5',
-    state: 'Maharashtra',
-    occupation: 'Software Engineer',
-    language: 'en',
-    role: 'user',
-    isActive: true,
-    lastLogin: null,
-    createdAt: new Date()
-  }
-];
 
 // Simple auth middleware
 const auth = async (req, res, next) => {
@@ -37,7 +19,7 @@ const auth = async (req, res, next) => {
     }
 
     const decoded = jwt.verify(token, config.JWT_SECRET);
-    const user = mockUsers.find(u => u.id === decoded.id);
+    const user = await User.findById(decoded.id).select('-password');
     
     if (!user) {
       return res.status(401).json({ message: 'Token is not valid' });
@@ -83,9 +65,12 @@ router.post('/book', [
       consultationType
     } = req.body;
 
-    // Create consultation
-    const consultation = {
-      id: (mockConsultations.length + 1).toString(),
+    // Find or create user (simplified - just use email as reference)
+    let user = await User.findOne({ email });
+    
+    // Create consultation in database
+    const consultation = new Consultation({
+      user: user ? user._id : null,
       name,
       email,
       mobile,
@@ -95,17 +80,19 @@ router.post('/book', [
       preferredTime,
       consultationType,
       message: message || '',
-      status: 'pending',
-      createdAt: new Date(),
-      updatedAt: new Date()
-    };
+      status: 'pending'
+    });
 
-    mockConsultations.push(consultation);
+    await consultation.save();
+    
+    // Send email notifications (async, don't wait)
+    sendConsultationNotification(consultation).catch(err => console.error('Email error:', err));
 
     res.status(201).json({
+      success: true,
       message: 'Consultation booked successfully',
       consultation: {
-        id: consultation.id,
+        id: consultation._id,
         name: consultation.name,
         email: consultation.email,
         mobile: consultation.mobile,
@@ -121,7 +108,7 @@ router.post('/book', [
     });
   } catch (error) {
     console.error('Book consultation error:', error);
-    res.status(500).json({ message: 'Server error during consultation booking' });
+    res.status(500).json({ success: false, message: 'Server error during consultation booking' });
   }
 });
 
@@ -130,29 +117,19 @@ router.post('/book', [
 // @access  Private
 router.get('/my-consultations', auth, async (req, res) => {
   try {
-    const userConsultations = mockConsultations.filter(
-      consultation => consultation.email === req.user.email
-    );
+    const userConsultations = await Consultation.find({ 
+      email: req.user.email 
+    })
+    .sort({ createdAt: -1 })
+    .select('-__v');
 
     res.json({
-      consultations: userConsultations.map(consultation => ({
-        id: consultation.id,
-        name: consultation.name,
-        email: consultation.email,
-        mobile: consultation.mobile,
-        state: consultation.state,
-        occupation: consultation.occupation,
-        preferredDate: consultation.preferredDate,
-        preferredTime: consultation.preferredTime,
-        consultationType: consultation.consultationType,
-        message: consultation.message,
-        status: consultation.status,
-        createdAt: consultation.createdAt
-      }))
+      success: true,
+      consultations: userConsultations
     });
   } catch (error) {
     console.error('Get consultations error:', error);
-    res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ success: false, message: 'Server error' });
   }
 });
 
@@ -161,37 +138,24 @@ router.get('/my-consultations', auth, async (req, res) => {
 // @access  Private
 router.get('/:id', auth, async (req, res) => {
   try {
-    const consultation = mockConsultations.find(c => c.id === req.params.id);
+    const consultation = await Consultation.findById(req.params.id).select('-__v');
     
     if (!consultation) {
-      return res.status(404).json({ message: 'Consultation not found' });
+      return res.status(404).json({ success: false, message: 'Consultation not found' });
     }
 
     // Check if user owns this consultation
     if (consultation.email !== req.user.email && req.user.role !== 'admin') {
-      return res.status(403).json({ message: 'Access denied' });
+      return res.status(403).json({ success: false, message: 'Access denied' });
     }
 
     res.json({
-      consultation: {
-        id: consultation.id,
-        name: consultation.name,
-        email: consultation.email,
-        mobile: consultation.mobile,
-        state: consultation.state,
-        occupation: consultation.occupation,
-        preferredDate: consultation.preferredDate,
-        preferredTime: consultation.preferredTime,
-        consultationType: consultation.consultationType,
-        message: consultation.message,
-        status: consultation.status,
-        createdAt: consultation.createdAt,
-        updatedAt: consultation.updatedAt
-      }
+      success: true,
+      consultation
     });
   } catch (error) {
     console.error('Get consultation error:', error);
-    res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ success: false, message: 'Server error' });
   }
 });
 

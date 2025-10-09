@@ -144,4 +144,59 @@ router.get('/me', async (req, res) => {
   }
 });
 
+// @route   POST /api/auth/create-admin
+// @desc    Create first admin user (one-time setup)
+// @access  Public (but should be secured in production)
+router.post('/create-admin', async (req, res) => {
+  try {
+    // Check if any admin already exists
+    const adminExists = await User.findOne({ role: 'admin' });
+    if (adminExists) {
+      return res.status(400).json({ 
+        message: 'Admin user already exists. Contact existing admin to create more admin accounts.' 
+      });
+    }
+
+    const { name, email, mobile, password } = req.body;
+
+    // Validation
+    if (!name || !email || !mobile || !password) {
+      return res.status(400).json({ message: 'Please provide all required fields' });
+    }
+
+    if (password.length < 6) {
+      return res.status(400).json({ message: 'Password must be at least 6 characters' });
+    }
+
+    const user = await User.create({
+      name,
+      email,
+      mobile,
+      password,
+      role: 'admin',
+      isActive: true,
+      state: '',
+      occupation: 'Admin',
+      language: 'en'
+    });
+
+    const token = signToken(user._id);
+    res.status(201).json({
+      success: true,
+      message: 'Admin user created successfully',
+      token,
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+        mobile: user.mobile,
+        role: user.role,
+      },
+    });
+  } catch (err) {
+    console.error('Create admin error:', err);
+    res.status(500).json({ message: 'Server error during admin creation' });
+  }
+});
+
 module.exports = router;
