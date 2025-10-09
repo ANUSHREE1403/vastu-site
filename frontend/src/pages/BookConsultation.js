@@ -3,6 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useAuth } from '../contexts/AuthContext';
 import { FiCalendar, FiUser, FiMail, FiPhone, FiMapPin, FiMessageSquare } from 'react-icons/fi';
 import toast from 'react-hot-toast';
+import api from '../services/api';
 
 const BookConsultation = () => {
   const { t, isHindi } = useLanguage();
@@ -49,36 +50,23 @@ const BookConsultation = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/consultations/book', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          ...(user && { 'Authorization': `Bearer ${localStorage.getItem('vastu-shakti-token')}` })
-        },
-        body: JSON.stringify(formData)
+      const response = await api.post('/consultations/book', formData);
+      
+      toast.success(isHindi ? 'परामर्श सफलतापूर्वक बुक हो गया!' : 'Consultation booked successfully!');
+      setFormData({
+        name: user?.name || '',
+        email: user?.email || '',
+        mobile: user?.mobile || '',
+        state: user?.state || '',
+        occupation: user?.occupation || '',
+        preferredDate: '',
+        preferredTime: '',
+        message: '',
+        consultationType: 'house'
       });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        toast.success(isHindi ? 'परामर्श सफलतापूर्वक बुक हो गया!' : 'Consultation booked successfully!');
-        setFormData({
-          name: user?.name || '',
-          email: user?.email || '',
-          mobile: user?.mobile || '',
-          state: user?.state || '',
-          occupation: user?.occupation || '',
-          preferredDate: '',
-          preferredTime: '',
-          message: '',
-          consultationType: 'house'
-        });
-      } else {
-        toast.error(data.message || (isHindi ? 'कुछ त्रुटि हुई है' : 'Something went wrong'));
-      }
     } catch (error) {
       console.error('Booking error:', error);
-      toast.error(isHindi ? 'कुछ त्रुटि हुई है' : 'Something went wrong');
+      toast.error(error.response?.data?.message || (isHindi ? 'कुछ त्रुटि हुई है' : 'Something went wrong'));
     } finally {
       setIsSubmitting(false);
     }
