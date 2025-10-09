@@ -303,7 +303,7 @@ const BookConsultation = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <FiPhone className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-600 dark:text-gray-400">+91-9739400311</span>
+                  <span className="text-gray-600 dark:text-gray-400">+91 84487 50725</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <FiMail className="w-5 h-5 text-blue-600" />

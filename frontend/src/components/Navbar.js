@@ -19,7 +19,8 @@ import {
   FiMail,
   FiLogIn,
   FiUserPlus,
-  FiSettings
+  FiSettings,
+  FiPhone
 } from 'react-icons/fi';
 
 const Navbar = () => {
@@ -77,6 +78,15 @@ const Navbar = () => {
 
           {/* Right side controls */}
           <div className="flex items-center space-x-4">
+            {/* Phone Number - Desktop Only */}
+            <a
+              href="tel:+918448750725"
+              className="hidden lg:flex items-center space-x-2 px-3 py-2 bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded-lg hover:bg-orange-100 dark:hover:bg-orange-900/30 transition-colors duration-200"
+            >
+              <FiPhone className="w-4 h-4" />
+              <span className="text-sm font-medium">+91 84487 50725</span>
+            </a>
+
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
@@ -173,6 +183,19 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
             <div className="flex flex-col space-y-2">
+              {/* Phone Number - Mobile */}
+              <a
+                href="tel:+918448750725"
+                className="flex items-center space-x-2 px-4 py-3 bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded-lg mx-4 mb-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <FiPhone className="w-5 h-5" />
+                <div className="flex flex-col">
+                  <span className="text-xs font-medium">{language === 'en' ? 'Call Us' : 'हमें कॉल करें'}</span>
+                  <span className="text-sm font-semibold">+91 84487 50725</span>
+                </div>
+              </a>
+
               {navItems.map((item) => (
                 <Link
                   key={item.path}
