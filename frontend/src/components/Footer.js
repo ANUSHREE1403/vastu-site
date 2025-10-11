@@ -157,22 +157,10 @@ const Footer = () => {
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
-                to="/privacy"
-                className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
-              >
-                {isHindi ? 'गोपनीयता नीति' : 'Privacy Policy'}
-              </Link>
-              <Link
                 to="/terms"
                 className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
               >
                 {isHindi ? 'नियम और शर्तें' : 'Terms & Conditions'}
-              </Link>
-              <Link
-                to="/refund"
-                className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
-              >
-                {isHindi ? 'रिफंड नीति' : 'Refund Policy'}
               </Link>
             </div>
           </div>
