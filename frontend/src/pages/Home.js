@@ -178,7 +178,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="gradient-bg text-white py-20 relative overflow-hidden min-h-[500px]">
         {/* 3D Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-red-400 to-orange-500 opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-red-600 to-orange-400 opacity-90"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-yellow-300/20 via-transparent to-red-500/20"></div>
         
         {/* Animated Background Particles */}
@@ -205,7 +205,7 @@ const Home = () => {
                  boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
                }}>
             <img
-              src="/Gemini_Generated_Image_qidalwqidalwqida.png"
+              src="/vastu-symbol-right.jpg"
               alt="Vastu Symbol"
               className="w-full h-full object-cover"
               style={{
@@ -249,7 +249,7 @@ const Home = () => {
                  boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
                }}>
             <img
-              src="/vastu-symbol-right.jpg"
+              src="/Gemini_Generated_Image_qidalwqidalwqida.png"
               alt="Vastu Symbol"
               className="w-full h-full object-cover"
               style={{
@@ -280,8 +280,8 @@ const Home = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp">
+          <div className="text-center px-4 md:px-20 lg:px-32">
+            <h1 className="text-2xl md:text-6xl font-bold mb-6 animate-fadeInUp">
               {isHindi ? (
                 <>
                   <span className="inline-block bg-gradient-to-r from-yellow-200 via-yellow-100 to-yellow-200 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(255,255,255,0.5)] animate-pulse">
@@ -481,7 +481,7 @@ const Home = () => {
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
           <div className="animate-fadeInUp">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight px-4 md:px-20 lg:px-32">
               {isHindi 
                 ? 'सिर्फ जीवन नहीं, वास्तु शक्ति के साथ समृद्धि पाएं' 
                 : "Don't Just Live, Prosper with Vastu Shakti"
