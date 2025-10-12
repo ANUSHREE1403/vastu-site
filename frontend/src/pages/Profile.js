@@ -14,6 +14,7 @@ import {
   FiX
 } from 'react-icons/fi';
 import toast from 'react-hot-toast';
+import SEO from "../components/SEO"
 
 const Profile = () => {
   const { isHindi } = useLanguage();
@@ -111,6 +112,7 @@ const Profile = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+      <SEO title={"Vastu shakti by Sumedha chandra Profile Page"} description={"Transform your life with Vastu Shakti - Ancient Vastu Shastra wisdom for modern living. Book free consultation and create harmonious spaces for prosperity and happiness."} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin, FiSend, FiStar } from 'react-icons/fi';
 import toast from 'react-hot-toast';
 import { contactService } from '../services/api';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const { isHindi } = useLanguage();
@@ -61,6 +62,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+      <SEO title={"Vastu shakti by Sumedha chandra Contact-us page"} description={"Transform your life with Vastu Shakti - Ancient Vastu Shastra wisdom for modern living. Book free consultation and create harmonious spaces for prosperity and happiness."} />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">

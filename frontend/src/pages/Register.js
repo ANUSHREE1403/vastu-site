@@ -4,6 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useAuth } from '../contexts/AuthContext';
 import Logo from '../components/Logo';
 import toast from 'react-hot-toast';
+import SEO from '../components/SEO';
 
 const Register = () => {
   const { isHindi } = useLanguage();
@@ -48,6 +49,7 @@ const Register = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+      <SEO title={"Vastu shakti by Sumedha chandra - Register page"} description={"Transform your life with Vastu Shakti - Ancient Vastu Shastra wisdom for modern living. Book free consultation and create harmonious spaces for prosperity and happiness."} />
       <div className="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
         <div className="card">
           <div className="text-center mb-8">

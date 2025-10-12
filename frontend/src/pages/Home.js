@@ -17,6 +17,7 @@ import {
   FiMessageCircle
 } from 'react-icons/fi';
 import ReviewModal from '../components/ReviewModal';
+import SEO from "../components/SEO"
 
 const Home = () => {
   const { t, isHindi } = useLanguage();
@@ -159,6 +160,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title={"Vastu shakti by Sumedha chandra Home page"} description={"Transform your life with Vastu Shakti - Ancient Vastu Shastra wisdom for modern living. Book free consultation and create harmonious spaces for prosperity and happiness."} />
       <style>{`
         @keyframes breathGlow {
           0%, 100% { transform: scale(1); opacity: 0.35; }
@@ -205,7 +207,7 @@ const Home = () => {
                  boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
                }}>
             <img
-              src="/vastu-symbol-right.jpg"
+              src="/vastu-symbol-right.webp"
               alt="Vastu Symbol"
               className="w-full h-full object-cover"
               style={{
@@ -249,7 +251,7 @@ const Home = () => {
                  boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
                }}>
             <img
-              src="/Gemini_Generated_Image_qidalwqidalwqida.png"
+              src="/Gemini_Generated_Image_qidalwqidalwqida.webp"
               alt="Vastu Symbol"
               className="w-full h-full object-cover"
               style={{
@@ -405,7 +407,7 @@ const Home = () => {
                  boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
                }}>
             <img
-              src="/Gemini_Generated_Image_rp4nrrrp4nrrrp4n.png"
+              src="/Gemini_Generated_Image_rp4nrrrp4nrrrp4n.webp"
               alt="Vastu Symbol"
               className="w-full h-full object-cover"
               style={{
@@ -449,7 +451,7 @@ const Home = () => {
                  boxShadow: '0 14px 28px rgba(0,0,0,0.12), 0 0 36px rgba(255,170,0,0.25)'
                }}>
             <img
-              src="/Gemini_Generated_Image_rp4nrrrp4nrrrp4n.png"
+              src="/Gemini_Generated_Image_rp4nrrrp4nrrrp4n.webp"
               alt="Vastu Symbol"
               className="w-full h-full object-cover"
               style={{

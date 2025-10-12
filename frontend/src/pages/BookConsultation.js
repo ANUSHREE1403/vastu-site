@@ -4,6 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { FiCalendar, FiUser, FiMail, FiPhone, FiMapPin, FiMessageSquare } from 'react-icons/fi';
 import toast from 'react-hot-toast';
 import api from '../services/api';
+import SEO from '../components/SEO';
 
 const BookConsultation = () => {
   const { t, isHindi } = useLanguage();
@@ -74,6 +75,7 @@ const BookConsultation = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+      <SEO title={"Vastu shakti by Sumedha chandra Booking page"} description={"Transform your life with Vastu Shakti - Ancient Vastu Shastra wisdom for modern living. Book free consultation and create harmonious spaces for prosperity and happiness."} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
