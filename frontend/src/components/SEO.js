@@ -1,13 +1,14 @@
-import react from 'react';
-import { Helmet } from 'react-helmet-async';
+import react from "react";
+import { Helmet } from "react-helmet-async";
 
 const SEO = ({ title, description }) => {
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      </Helmet>
-  )
-}
+      <meta name="keywords" content={keywords} />
+    </Helmet>
+  );
+};
 
 export default SEO;
