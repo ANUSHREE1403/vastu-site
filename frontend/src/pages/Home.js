@@ -160,7 +160,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      <SEO title={"Vastu shakti by Sumedha chandra Home page"} description={"Transform your life with Vastu Shakti - Ancient Vastu Shastra wisdom for modern living. Book free consultation and create harmonious spaces for prosperity and happiness."} keywords={"Vastu Shakti Gurgaon, Vastu consultant in Gurgaon, Vastu expert Gurgaon, Sumedha Chandra Gurgaon, best vastu in Gurgaon"}/>
+      <SEO title={"Vastu shakti by Sumedha chandra Home page"} description={"Transform your life with Vastu Shakti - Ancient Vastu Shastra wisdom for modern living. Book free consultation and create harmonious spaces for prosperity and happiness."} keywords={"Vastu Shakti Gurgaon, Vastu consultant in Gurgaon, Vastu expert Gurgaon, Sumedha Chandra Gurgaon, best Vastu in Gurgaon, Vastu consultant, Vastu astrologer, Vastu expert, Vastu Shakti, Delhi, Gurgaon, Noida, Faridabad, Greater Noida, Delhi NCR, Vastu for home, Vastu for office, Vastu for business, Vastu consultant near me, Vastu Shakti by Sumedha Chandra"}/>
       <style>{`
         @keyframes breathGlow {
           0%, 100% { transform: scale(1); opacity: 0.35; }

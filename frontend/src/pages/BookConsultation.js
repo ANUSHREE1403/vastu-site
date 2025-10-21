@@ -75,7 +75,7 @@ const BookConsultation = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
-      <SEO title={"Vastu shakti by Sumedha chandra Booking page"} description={"Transform your life with Vastu Shakti - Ancient Vastu Shastra wisdom for modern living. Book free consultation and create harmonious spaces for prosperity and happiness."} keywords={"Vastu, Vastu consultant, Vastu astrologer, Delhi, Gurgaon, Noida, Faridabad, Greater Noida, Delhi NCR"}/>
+      <SEO title={"Vastu shakti by Sumedha chandra Booking page"} description={"Transform your life with Vastu Shakti - Ancient Vastu Shastra wisdom for modern living. Book free consultation and create harmonious spaces for prosperity and happiness."} keywords={"Vastu Shakti Gurgaon, Vastu consultant in Gurgaon, Vastu expert Gurgaon, Sumedha Chandra Gurgaon, best Vastu in Gurgaon, Vastu consultant, Vastu astrologer, Vastu expert, Vastu Shakti, Delhi, Gurgaon, Noida, Faridabad, Greater Noida, Delhi NCR, Vastu for home, Vastu for office, Vastu for business, Vastu consultant near me, Vastu Shakti by Sumedha Chandra"}/>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
