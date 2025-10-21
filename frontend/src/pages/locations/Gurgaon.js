@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SEO from "../../components/SEO";
+import SEO from "../../components/SEO.js";
 import ReviewModal from "../../components/ReviewModal";
 import { FiArrowRight, FiMessageCircle } from "react-icons/fi";
 
