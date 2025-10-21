@@ -4,6 +4,7 @@ import { Toaster } from 'react-hot-toast';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { AuthProvider } from './contexts/AuthContext';
+import Gurgaon from './pages/locations/Gurgaon';
 
 // Pages
 import Home from './pages/Home';
@@ -42,6 +43,7 @@ function App() {
                   <Route path="/dashboard" element={<Dashboard />} />
                   <Route path="/profile" element={<Profile />} />
                   <Route path="/book-consultation" element={<BookConsultation />} />
+                  <Route path="/locations/gurgaon" element={<Gurgaon />} />
                 </Routes>
               </main>
               <Footer />
