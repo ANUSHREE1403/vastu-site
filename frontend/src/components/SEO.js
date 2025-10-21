@@ -1,7 +1,7 @@
 import react from "react";
 import { Helmet } from "react-helmet-async";
 
-const SEO = ({ title, description }) => {
+const SEO = ({ title, description, keywords }) => {
   return (
     <Helmet>
       <title>{title}</title>
